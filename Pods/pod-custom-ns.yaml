@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-in-custom-ns
+  namespace: custome-namespace
+  labels:
+    createdBy: Farazjahangir
+  annotations:
+    pod-spec: pod in custome namespace
+spec:
+  containers:
+    - name: nginx
+      image: nginx
