@@ -1,0 +1,8 @@
+#port forwading
+k port-forward [pod-name] [your-port:container-port]
+
+#create Service
+k expose po [pod-name] --type=NodePort
+
+#this command will give url to access your image
+minikube service [pod-name] --url

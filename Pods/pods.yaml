@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx-pod
+  labels:
+    createdBy: faraz_jahangir
+    learning: Kuburnetes
 spec:
   containers:
     - name: container-1
