@@ -5,6 +5,8 @@ metadata:
   labels:
     createdBy: faraz_jahangir
     learning: Kuburnetes
+  annotations:
+    learning: laerning kuburnetes to pass CKAD
 spec:
   containers:
     - name: container-1
