@@ -1,4 +1,10 @@
+# configMapGenerator:
+# - name: game-config-5
+#   files:
+#   - dataForConfigMap/game.properties
+
 configMapGenerator:
-- name: game-config-4
-  files:
-  - dataForConfigMap/game.properties
+- name: special-config-2
+  literals:
+  - special.how=very
+  - special.type=charm
