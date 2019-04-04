@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-env-var
+spec:
+  containers:
+    - name: container-1
+      image: nginx
+      volumeMounts:
+        - name: special-volume
+          mountPath: /home/configMapData
+  volumes:
+    - name: special-volume
+      configMap:
+        name: special-config
