@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-env-var
+spec:
+  containers:
+    - image: nginx
+      name: container-1
+      env:
+        # Specify your env var name
+        - name: MY_NAME
+          valueFrom:
+            configMapKeyRef:
+              # Name of the configMap which contains value
+              name: special-config
+              # Config map key name
+              key: first-name
