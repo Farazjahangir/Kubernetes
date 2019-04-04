@@ -1,3 +1,24 @@
+# Saving configMap data in volumes
+
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: pod-with-env-var
+# spec:
+#   containers:
+#     - name: container-1
+#       image: nginx
+#       volumeMounts:
+#         - name: special-volume
+#           mountPath: /home/configMapData
+#   volumes:
+#     - name: special-volume
+#       configMap:
+#         name: special-config
+
+
+# Saving specific key values from configMap in vloumes
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -13,3 +34,9 @@ spec:
     - name: special-volume
       configMap:
         name: special-config
+        items:
+            # key name to save value shuold be unique
+          - key: first-name
+            path: FIRST-NAME
+          - key: last-name
+            path: LAST-NAME
